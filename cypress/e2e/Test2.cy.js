@@ -1,4 +1,4 @@
-describe('My First test suite', () => {
+describe('My Second test suite', () => {
   it('My First test Case', () => {
 
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
@@ -16,6 +16,9 @@ describe('My First test suite', () => {
       }
     })
     cy.get('.brand').should('have.text', 'GREENKART')
+    cy.get('.cart-icon > img').click()
+    cy.contains('PROCEED TO CHECKOUT').click()
+    cy.contains('Place Order').click()
 
   })
 })
